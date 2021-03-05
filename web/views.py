@@ -17,7 +17,8 @@ def beer(request, id):
 
 def brewer(request, id):
     brewer = Brewer.objects.get(id=id)
-    return render(request, 'web/brewer.html', {'brewer': brewer})
+    beers = Beer.objects.filter(brewer = id)
+    return render(request, 'web/brewer.html', {'brewer': brewer, 'beers': beers})
 
 def events(request):
     return render(request, 'web/events.html')    

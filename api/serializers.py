@@ -5,13 +5,13 @@ from rest_framework import serializers
 class BrewerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Brewer
-        fields = ('name', 'founded', 'description', 'address', 'email', 'phone', 'website')
+        fields = ('id', 'name', 'founded', 'description', 'address', 'email', 'phone', 'website')
 
 class BeerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Beer
-        fields = ('name', 'style', 'description', 'ibu', 'abv', 'brewer_name')
+        fields = ('id','name', 'style', 'description', 'ibu', 'abv', 'brewer_name')
 
     brewer_name = serializers.SerializerMethodField('get_brewers_name')
 
