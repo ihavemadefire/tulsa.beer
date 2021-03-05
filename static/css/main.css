@@ -21,6 +21,9 @@ button:hover, button:active {
 .beercard {
     border: 7px solid gold;
     border-radius: 10px;
+    background-image: url(../images/flag-square.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .more-button {
