@@ -8,12 +8,16 @@ class BrewerSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('name', 'founded', 'description', 'address', 'email', 'phone', 'website')
 
 class BeerSerializer(serializers.ModelSerializer):
-    brewer = serializers.PrimaryKeyRelatedField(many=False, read_only=True)
 
     class Meta:
         model = Beer
-        fields = ('name', 'style', 'description', 'ibu', 'abv', 'brewer')
-        
+        fields = ('name', 'style', 'description', 'ibu', 'abv', 'brewer_name')
+
+    brewer_name = serializers.SerializerMethodField('get_brewers_name')
+
+    def get_brewers_name(self, obj):
+        return obj.brewer.name
+
 class EventSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Event
