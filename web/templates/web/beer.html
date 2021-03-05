@@ -1,0 +1,18 @@
+{% extends 'web/base.html'%}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5 tallrow">
+        <div class="col-md-6"></div>
+        <div class="col-md-6 d-flex flex-column justify-content-center border-left">
+            <p>Name: {{beer.name}}</p>
+            <p>Brewer: {{beer.brewer}}</p>
+            <p>Style: {{beer.style}}</p>
+            <p>IBU: {{beer.ibu}}</p>
+            <p>ABV: {{beer.abv}}</p>
+        </div>
+    </div>
+    <hr>
+    <p class="text-center">{{beer.description}}</p>
+</div>
+{% endblock content %}

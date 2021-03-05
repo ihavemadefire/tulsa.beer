@@ -1,0 +1,21 @@
+{% extends 'web/base.html'%}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5 tallrow">
+        <div class="col-md-6"></div>
+        <div class="col-md-6 d-flex flex-column justify-content-center border-left">
+            <p>Name: {{brewer.name}}</p>
+            <p>Year Founded: {{brewer.founded}}</p>
+            <p>Address: {{brewer.address}}</p>
+            <p>Email: {{brewer.email}}</p>
+            <p>Phone: {{brewer.phone}}</p>
+            <p>Website <a href="{{brewer.website}}">{{brewer.website}}</a></p>
+        </div>
+    </div>
+    <hr>
+    <p class="text-center">{{brewer.description}}</p>
+</div>
+{% endblock content %}
+
+
