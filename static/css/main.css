@@ -12,6 +12,41 @@ button:hover, button:active {
     opacity: .9;
 }
 
-.cart-text {
-    width: 50%;
+.card-text {
+    text-align: center;
+    font-size: smaller;
+    line-height: 80%
+}   
+
+.beercard {
+    border: 7px solid gold;
+    border-radius: 10px;
+}
+
+.more-button {
+    background-color: midnightblue;
+    color: antiquewhite;
+}
+
+.card-inset {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: firebrick;
+    color: antiquewhite;
+    border-radius: 10px;
+    margin-top: 0%;
+    margin-bottom: 1rem;
+}
+
+.brewercard {
+    border: 7px solid gold;
+    border-radius: 10px;
+}
+
+.carousel{
+    border: 7px solid gold;
+}
+
+.carousel-text {
+    font-size: 16px;
 }
